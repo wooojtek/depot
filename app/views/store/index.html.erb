@@ -13,6 +13,8 @@
         <%= sanitize(product.description) %>
         <div class="price_line">
           <span class="price"><%= number_to_currency(product.price) %></span>
+          <span class="price"><%= number_to_currency(product.price, locale: :gb) %></span>
+          <span class="price"><%= number_to_currency(product.price, unit: "GBP ") %></span>
         </div>
       </div>
     <% end %>
