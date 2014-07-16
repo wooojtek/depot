@@ -7,3 +7,12 @@ one:
 two:
   product_id: 
   cart_id: 
+
+
+# one:
+  # product: ruby
+  # order: one
+# 
+# two:
+  # product: ruby
+  # cart: one
