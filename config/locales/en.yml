@@ -19,5 +19,76 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:flash
 en:
-  hello: "Hello world"
+
+#END:cart
+#END:checkout
+#END:flash
+#END:main
+#END:layout
+  number:
+    currency:
+      format:
+        unit:      "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+#END:currency
+
+#START:errors
+  errors:
+    template:
+      body_html:   "There were problems with the following fields:"
+      header:       
+        one:       "1 error prohibited this %{model} from being saved"
+        other:     "%{count} errors prohibited this %{model} from being saved"
+#END:errors
+
+#START:layout
+  layouts:
+    application:
+      title:       "Pragmatic Bookshelf"
+      home_html:   "Home"
+      questions:   "Questions"
+      news_html:   "News"
+      contact:     "Contact"
+#END:layout
+
+#START:cart
+  carts:
+    cart:
+      title_html:  "Your Cart"
+      empty_html:  "Empty cart"
+      checkout_html: "Checkout"
+#END:cart
+
+#START:main
+  store:
+    index:
+      title_html:  "Your Pragmatic Catalog"
+      add_html:    "Add to Cart"
+#END:main
+
+#START:checkout
+  orders:
+    new:
+      legend_html: "Please Enter Your Details"
+    form:
+      name_html:   "Name"
+      address_html: "Address"
+      email:       "E-mail"
+      pay_type_html: "Pay with"
+      pay_prompt_html: "Select a payment method"
+      submit_html: "Place Order"
+#END:checkout
+
+#START:flash
+  thanks:          "Thank you for your order"
+#END:flash

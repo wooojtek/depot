@@ -1,0 +1,94 @@
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:errors
+#START:model
+#START:flash
+pl:
+
+#END:cart
+#END:flash
+#END:model
+#END:errors
+#END:checkout
+#END:main
+#END:layout
+  number:
+    currency:
+      format:
+        unit:      "z&lstrok;"
+        precision: 2
+        separator: ","
+        delimiter: " "
+        format:    "%n&nbsp;%u"
+#END:currency
+
+#START:model
+#START:errors
+  activerecord:
+#END:errors
+    models:
+      order:       "zam&oacute;wienie"
+    attributes:
+      order:
+        address:   "Adres"
+        name:      "Imi&eogon;"
+        email:     "E-mail"
+        pay_type:  "Forma p&lstrok;atno&sacute;ci"
+#END:model
+#START:errors
+    errors:
+      messages:
+        inclusion: "nie ma na li&sacute;cie"
+        blank:     "nie mo&zdot;e by&cacute; puste"
+  errors:
+    template:
+      body_html:   "Wys&aogon;tpi&lstrok;y problemy z nast&eogon;pujacymi polami:"
+      header:
+        one:       "1 b&lstrok;&aogon;d uniemo&zdot;liwi&lstrok; %{model}"
+        other:     "%{count} b&lstrok;&eogon;dy uniemo&zdot;liwi&lstrok;y %{model}"
+#END:errors
+
+#START:layout
+  layouts:
+    application:
+      title:       "Biblioteczka Pragmatyczna"
+      home_html:   "Strona g&lstrok;&oacute;wna"
+      questions:   "Pytania"
+      news_html:   "Wiadomo&sacute;ci"
+      contact:     "Kontakt"
+#END:layout
+
+#START:cart
+  carts:
+    cart:
+      title_html:  "Tw&oacute;j koszyk"
+      empty_html:  "Opr&oacute;&zdot;nij koszyk"
+      checkout_html: "Zam&oacute;w"
+#END:cart
+
+#START:main
+  store:
+    index:
+      title_html:  "Tw&oacute;j katalog pragmatyczny"
+      add_html:    "Dodaj do koszyka"
+#END:main
+
+#START:checkout
+  orders:
+    new:
+      legend_html: "Wprowad&zacute; swoje dane"
+    form:
+      name_html:    "Imi&eogon;"
+      address_html: "Adres"
+      email:        "E-mail"
+      pay_type_html: "Forma p&lstrok;atno&sacute;ci"
+      pay_prompt_html: "Wybierz form&eogon; p&lstrok;atno&sacute;ci"
+      submit_html:  "Z&lstrok;&oacute;&zdot; zam&oacute;wienie"
+#END:checkout
+
+#START:flash
+  thanks:          "Dzi&eogon;kujemy za zam&oacute;wienie"
+#END:flash
