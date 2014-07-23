@@ -18,7 +18,7 @@ set :deploy_to, "/home/#{user}/#{application}"
 role :web, domain                          # Your HTTP server, Apache/etc
 role :app, domain                          # This may be the same as your `Web` server
 role :db,  domain, :primary => true        # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+# role :db,  "your slave db-server here"
 
 # you might need to set this if you aren't seeing password prompts
 # default_run_options[:pty] = true
