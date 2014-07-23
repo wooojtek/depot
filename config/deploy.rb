@@ -5,7 +5,7 @@ set :domain, 'cwhen-wks-37c6a.changeworks.local'
 set :application, 'depot'
 
 set :rvm_type, :user
-set :rvm_ruby_string, 'ruby-2.1.1-p76'
+set :rvm_ruby_string, 'ruby-2.1.1'
 require 'rvm/capistrano'
 
 # file paths
