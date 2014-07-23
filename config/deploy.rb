@@ -9,7 +9,7 @@ set :rvm_ruby_string, 'ruby-2.1.1'
 require 'rvm/capistrano'
 
 # file paths
-set :repository,  "#{user}@#{domain}:/~/git/#{application}.git"
+set :repository,  "#{user}@#{domain}:~/git/#{application}.git"
 set :deploy_to, "/home/#{user}/#{application}"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
