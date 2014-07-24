@@ -48,3 +48,5 @@ gem 'rvm-capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'net-ssh', '2.7.0'

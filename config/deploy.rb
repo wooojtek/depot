@@ -9,7 +9,8 @@ set :rvm_ruby_string, 'ruby-2.1.1'
 require 'rvm/capistrano'
 
 # file paths
-set :repository,  "#{user}@#{domain}:~/git/#{application}.git"
+# set :repository,  "#{user}@#{domain}:~/git/#{application}.git"
+set :repository, 'git@github.com:wooojtek/depot.git'
 set :deploy_to, "/home/#{user}/#{application}"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
@@ -22,6 +23,8 @@ role :db,  domain, :primary => true        # This is where Rails migrations will
 
 # you might need to set this if you aren't seeing password prompts
 # default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+default_run_options[:pty] = true
 
 # As Capistrano executes in a non-interactive mode and therefore doesn't cause
 # any of your shell profile scripts to be run, the following might be needed
